@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Logger</title>
+</head>
+<body>
+    <h1>IP Logger</h1>
+    <p>Tracking your IP address...</p>
+
+    <script>
+        // Send user's IP to an external server
+        fetch('https://your-external-server.com/log_ip', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ip: '' // You will fetch and send the IP address from the external server's backend.
+            })
+        });
+    </script>
+</body>
+</html>
